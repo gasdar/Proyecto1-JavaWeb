@@ -1,0 +1,40 @@
+body{
+    background-color: #aab;
+}
+
+#container1{
+    background-color: #8ab;
+    margin: 0px;
+}
+
+#container1 img{
+    width: 180px;
+}
+
+#container2{
+    padding: 20px;
+}
+
+#container2 h1, #container2 h2{
+    margin: 20px 0px;
+}
+
+#container2 section{
+    padding: 40px; 
+}
+
+#container3{
+    background-color: #8ab;
+    padding: 50px;
+    margin: 0px;
+}
+
+#container3 div{
+    margin-bottom: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+}

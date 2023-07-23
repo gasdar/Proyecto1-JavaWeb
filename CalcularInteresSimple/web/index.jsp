@@ -16,7 +16,7 @@
         <title>ISimple.Inicio</title>
     </head>
     <body>
-        
+         
         <!-- Logo tipo y presentación de la pagína principal -->
         <header class="container-fluid justify-content-between align-items-center row" id="container1">
             
@@ -44,24 +44,33 @@
             <section class="row justify-content-center">
                 <div class="col-10">
                     <h2>Ingrese los Siguientes Datos:</h2>
-                    <form action="" method="post" name="formulario1" id="formulario1">
+                    <form action="controller" method="post" name="formulario1" id="formulario1">
                         <div class="col-12 div-in">
                             <label for="capital" class="form-label">Capital total</label>
-                            <input type="number" name="capital" id="capital" class="form-control" required>
+                            <input type="number" name="capital" id="capital" class="form-control">
+                            <c:if test="${not empty errores.capital}">
+                                <div id="error1" class="form-text">${errores.capital}</div>
+                            </c:if>
                         </div>
 
                         <div class="col-12 div-in">
                             <label for="interes" class="form-label">Tasa de interes</label>
-                            <input type="number" name="interes" id="interes" class="form-control" required>
+                            <input type="number" name="interes" id="interes" class="form-control">
+                            <c:if test="${not empty errores.interes}">
+                                <div id="error2" class="form-text">${errores.interes}</div>
+                            </c:if>
                         </div>
 
                         <div class="col-12 div-in">
-                            <label for="capital" class="form-label">Números de Años</label>
-                            <input type="number" name="capital" id="capital" class="form-control" required>
+                            <label for="anio" class="form-label">Números de Años</label>
+                            <input type="number" name="anio" id="anio" class="form-control">
+                            <c:if test="${not empty errores.anio}">
+                                <div id="error3" class="form-text">${errores.anio}</div>
+                            </c:if>
                         </div>
 
                         <div class="col-12 div-in">
-                            <input type="submit" value="ENVIAR" form="formulario1">
+                            <input type="submit" value="ENVIAR" form="formulario1" class="btn btn-secondary">
                         </div>
                     </form>
                 </div>
@@ -94,7 +103,7 @@
                 <a href="#container1">Somos ISimple</a>
             </div>
             <div class="col-sm-5">
-                <a href="#">Encuentra el código en <i class="fa-brands fa-github"></i></a>
+                <a href="https://github.com/gasdar/Proyecto1-JavaWeb">Encuentra el código en <i class="fa-brands fa-github"></i></a>
             </div>
         </footer>
         
